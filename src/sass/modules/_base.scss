@@ -1,0 +1,44 @@
+// Flexible base styles
+$flex-breakpoint: 768px;
+
+.flex {
+  flex: 1 1;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.flex-smart {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $flex-breakpoint) {
+    flex-direction: row;
+  }
+}
+
+.flex-smart-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: $flex-breakpoint) {
+    flex-direction: row-reverse;
+  }
+}
