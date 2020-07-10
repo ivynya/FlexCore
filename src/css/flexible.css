@@ -112,6 +112,7 @@ body {
   font-family: inherit;
   font-size: inherit;
   text-align: center;
+  text-decoration: none;
   transition-duration: 0.2s;
 }
 
@@ -135,7 +136,8 @@ body {
 .btn-disabled {
   background-color: #555;
   border-color: #555;
-  color: #e6e6e6;
+  color: #b3b3b3;
+  cursor: not-allowed;
 }
 
 /* List stylings */

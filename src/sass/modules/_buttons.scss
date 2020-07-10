@@ -2,7 +2,7 @@
 $bg-primary: #0af;
 $bg-disabled: #555;
 $text-primary: #fff;
-$text-disabled: darken($text-primary, 10);
+$text-disabled: darken($text-primary, 30);
 
 .btn, .btn-outline, .btn-disabled {
   border: $bg-primary 2px solid;
@@ -11,6 +11,7 @@ $text-disabled: darken($text-primary, 10);
   font-family: inherit;
   font-size: inherit;
   text-align: center;
+  text-decoration: none;
   transition-duration: 0.2s;
 }
 
@@ -37,4 +38,5 @@ $text-disabled: darken($text-primary, 10);
   background-color: $bg-disabled;
   border-color: $bg-disabled;
   color: $text-disabled;
+  cursor: not-allowed;
 }
