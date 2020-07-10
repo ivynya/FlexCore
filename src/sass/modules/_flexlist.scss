@@ -1,0 +1,24 @@
+/* List stylings */
+$margin: 20px;
+
+.flex-list {
+  &.flex-column > *:not(:last-child),
+  &.flex-column-reverse > *:not(:first-child), 
+  &.flex-smart > *:not(:last-child),
+  &.flex-smart-reverse > *:not(:first-child) {
+    margin-bottom: $margin;
+  }
+
+  &.flex-row > *:not(:last-child),
+  &.flex-row-reverse > *:not(:first-child) {
+    margin-right: $margin;
+  }
+
+  @media (min-width: 768px) {
+    &.flex-smart > *:not(:last-child),
+    &.flex-smart-reverse > *:not(:first-child) {
+      margin-right: $margin;
+      margin-bottom: 0;
+    }
+  }
+}

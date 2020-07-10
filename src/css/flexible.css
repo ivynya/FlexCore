@@ -138,6 +138,20 @@ body {
   color: #e6e6e6;
 }
 
+/* List stylings */
+.flex-list.flex-column > *:not(:last-child), .flex-list.flex-column-reverse > *:not(:first-child), .flex-list.flex-smart > *:not(:last-child), .flex-list.flex-smart-reverse > *:not(:first-child) {
+  margin-bottom: 20px;
+}
+.flex-list.flex-row > *:not(:last-child), .flex-list.flex-row-reverse > *:not(:first-child) {
+  margin-right: 20px;
+}
+@media (min-width: 768px) {
+  .flex-list.flex-smart > *:not(:last-child), .flex-list.flex-smart-reverse > *:not(:first-child) {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+
 /* Core styles */
 /* Optional module styles */
 
