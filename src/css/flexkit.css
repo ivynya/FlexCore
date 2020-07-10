@@ -140,7 +140,6 @@ body {
   cursor: not-allowed;
 }
 
-/* List stylings */
 .flex-list.flex-column > *:not(:last-child), .flex-list.flex-column-reverse > *:not(:first-child), .flex-list.flex-smart > *:not(:last-child), .flex-list.flex-smart-reverse > *:not(:first-child) {
   margin-bottom: 20px;
 }
@@ -152,6 +151,20 @@ body {
     margin-right: 20px;
     margin-bottom: 0;
   }
+}
+
+.nav-left {
+  margin-right: auto !important;
+}
+
+.nav-right {
+  margin-left: auto !important;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 10px;
+  transition-duration: 0.2s;
 }
 
 /* Core styles */
