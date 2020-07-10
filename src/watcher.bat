@@ -1,5 +1,5 @@
 @echo off
 
-title flexible sass watcher
+title flexkit sass watcher
 
-sass --watch ./sass/flexible.scss ./css/flexible.css
+sass --watch ./sass/flexkit.scss ./css/flexkit.css
