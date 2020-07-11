@@ -23,8 +23,8 @@ html {
   padding: 20px;
 }
 
-.card h3 {
-  margin-top: 0;
+.card h2 {
+  margin-top: 5px;
 }
 
 .outline {
