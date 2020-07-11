@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FlexKit v0.1.0a</title>
+  <meta name="description" content="FlexKit is a hyperlight IE10+ flex framework built to be built on.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/flexkit.css">
+  <link rel="stylesheet" type="text/css" href="assets/docs.css">
+  <style>html { font-family: sans-serif; }</style>
+</head>
+<body>
+  <header>
+    <nav class="container-wide flex-smart flex-list align-center">
+      <a href="./" class="flex-row align-center">
+        <img src="./assets/flexkit_icon.png" alt="Flexkit Icon" style="margin-right: 5px;">
+        <h1>FlexKit v0.1.0a</h1>
+      </a>
+      <a href="https://github.com/SDBagel/FlexKit" class="btn-outline nav-right">Github</a>
+      <a href="https://github.com/SDBagel/FlexKit" class="btn">Download</a>
+    </nav>
+  </header>
+  <main class="container-wide flex-column">
+    <h2>Flex Layout</h2>
+    <p>flex-smart, flex-list, flex, btn, btn-outline, btn-disabled</p>
+    <div class="flex-smart flex-list">
+      <button class="btn flex">Primary</button>
+      <button class="btn-outline flex">Secondary</button>
       <button class="btn-disabled flex">Secondary</button>
+    </div>
+    <br>
+    <p>flex-smart-reverse</p>
+    <div class="flex-smart-reverse flex-list">
+      <button class="btn flex">Primary</button>
+      <button class="btn-outline flex">Secondary</button>
+      <button class="btn-disabled flex">Secondary</button>
+    </div>
+    <br>
+    <p>anchor elements</p>
+    <div class="flex-smart flex-list">
+      <a href="" class="btn flex">Primary</a>
+      <a href="" class="btn-outline flex">Secondary</a>
+      <a href="" class="btn-disabled flex">Secondary</a>
+    </div>
+    <br>
+    <p>flex-column</p>
+    <div class="flex-column flex-list">
+      <a href="" class="btn flex">Primary</a>
+      <a href="" class="btn-outline flex">Secondary</a>
+      <a href="" class="btn-disabled flex">Secondary</a>
+    </div>
+    <br>
+    <p>flex-wrap</p>
+    <div class="flex-row flex-list flex-wrap">
+      <div class="card">
+        <h3>A fixed-width card</h3>
+      </div>
+      <div class="card">
+        <h3>A fixed-width card</h3>
+      </div>
+      <div class="card">
+        <h3>A fixed-width card</h3>
+      </div>
+      <div class="card">
+        <h3>A fixed-width card</h3>
+      </div>
+    </div>
+    <br>
+    <h2>Navigation</h2>
+    <p>flex-smart, flex-list, nav-right, nav-link</p>
+    <nav class="flex-smart flex-list">
+      <a href="" class="nav-link">Primary</a>
+      <a href="" class="nav-link nav-right">Secondary</a>
+      <a href="" class="nav-link">Secondary</a>
+    </nav>
+    <br>
+    <p>nav-left</p>
+    <nav class="flex-smart flex-list">
+      <a href="" class="nav-link">Primary</a>
+      <a href="" class="nav-link nav-left">Primary</a>
+      <a href="" class="nav-link">Secondary</a>
+    </nav>
+  </main>
+</body>
+</html>
