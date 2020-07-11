@@ -1,6 +1,37 @@
+html {
+  font-family: nunito, sans-serif;
+}
+
+.nav {
+  margin-top: 30px;
+}
+
+.nav-brand {
+  color: #000;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.content-header {
+  height: 300px;
+}
+
 .card {
   box-shadow: #777 0 2px 6px;
-  width: 200px;
-  height: 100px;
+  width: 230px;
+  line-height: 24px;
   padding: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.outline {
+  width: 200px;
+  margin-right: 50px;
+}
+
+.outline a {
+  margin-bottom: 10px;
 }
