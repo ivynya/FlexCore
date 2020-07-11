@@ -21,4 +21,9 @@ $margin: 20px;
       margin-bottom: 0;
     }
   }
+
+  &.flex-wrap > * {
+    margin-right: $margin;
+    margin-bottom: $margin;
+  }
 }

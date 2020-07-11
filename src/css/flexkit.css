@@ -42,6 +42,10 @@
   }
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .justify-start {
   justify-content: flex-start;
 }
@@ -151,6 +155,10 @@ body {
     margin-right: 20px;
     margin-bottom: 0;
   }
+}
+.flex-list.flex-wrap > * {
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .nav-left {
