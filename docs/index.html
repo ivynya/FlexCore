@@ -32,7 +32,7 @@
       </div>
       <div class="card">
         <h2>Hyperlight</h2>
-        <p>FlexKit is less than 4KB non-gzipped, or about 37 times smaller than Bootstrap 4.</p>
+        <p>FlexKit is less than 1KB gzipped, or about 35 times smaller than Bootstrap 4.</p>
       </div>
       <div class="card">
         <h2>Extensible</h2>
@@ -45,43 +45,76 @@
     <div class="flex-smart">
       <section class="flex-column outline">
         <h2>Outline</h2>
-        <a href="#flexlayout">Flex Layout</a>
+        <a href="#core"><b>FlexKit Core</b></a>
+        <a href="#container">Container</a>
+        <a href="#flexchildren">Flex Children</a>
+        <a href="#flexdirections">Flex Directions</a>
+        <a href="#responsiveflex">Responsive Flex</a>
+        <a href="#flexalignment">Flex Alignment</a>
+        <a href="#flexwrap">Flex Wrap</a>
+        <br>
+        <a href="#full"><b>FlexKit Full</b></a>
+        <a href="#buttons">Buttons Module</a>
+        <a href="#flexlist">Flexlist Module</a>
         <a href="#navigation">Navigation Module</a>
       </section>
-      <section class="flex-column flex">
-        <h2>Documentation</h2>
-        <p>This entire page is built using FlexKit.</p>
-        <a name="flexlayout"></a>
-        <h2>Flex Layout</h2>
-        <p>flex-smart, flex-list, flex, btn, btn-outline, btn-disabled</p>
-        <div class="flex-smart flex-list">
-          <button class="btn flex">Primary</button>
-          <button class="btn-outline flex">Secondary</button>
-          <button class="btn-disabled flex">Secondary</button>
+      <section class="flex-column flex docs">
+        <a name="core"></a>
+        <h2>FlexKit Core</h2>
+        <p>FlexKit Core is the minimum, responsive, layouting shim of FlexKit. FlexKit Core features the base flex styles, alignment modifiers, and a Bootstrap-like container component to let you start building web layouts quickly and efficiently.</p>
+        <p>FlexKit also includes other modules and components, including classes to help build lists, navigation, and more, which are included in <a href="#full">FlexKit Full</a>. Alternatively, compile a custom shim of FlexKit with the desired modules with the SASS source files.</p>
+        <a name="container"></a>
+        <h2>Container</h2>
+        <p>FlexKit Core includes a <code>container</code> and <code>container-wide</code> class. These behave similarly to Bootstrap containers and allow content to stay in the middle of the screen without flowing out too far from the center. The default container's max-width is 768 pixels, while the container-wide class adds another breakpoint at 992 pixels.</p>
+        <a name="flexchildren"></a>
+        <h2>Flex Children</h2>   
+        <p>FlexKit includes a <code>.flex</code> CSS class that applies <code>flex: 1 1</code> to any element. This is useful in conjunction with the flex-directions and other helpers described below.</p>
+        <a name="flexdirections"></a>
+        <h2>Flex Directions</h2>
+        <p>FlexKit includes all the flex directions, including row, column, and their reverse variants. These are specified with <code>flex-row, flex-row-reverse</code>, etc.</p>
+        <p>Each direction is the CSS <code>flex-direction</code> property combined with <code>display: flex</code>.</p>
+        <h3>flex-row, flex-row-reverse</h3>
+        <p>flex-row</p>
+        <div class="flex-row flex-list">
+          <button class="btn flex">1</button>
+          <button class="btn-outline flex">2</button>
+          <button class="btn-outline flex">3</button>
         </div>
         <br>
-        <p>flex-smart-reverse</p>
-        <div class="flex-smart-reverse flex-list">
-          <button class="btn flex">Primary</button>
-          <button class="btn-outline flex">Secondary</button>
-          <button class="btn-disabled flex">Secondary</button>
+        <p>flex-row-reverse</p>
+        <div class="flex-row-reverse flex-list">
+          <button class="btn flex">1</button>
+          <button class="btn-outline flex">2</button>
+          <button class="btn-outline flex">3</button>
         </div>
         <br>
-        <p>anchor elements</p>
-        <div class="flex-smart flex-list">
-          <a href="" class="btn flex">Primary</a>
-          <a href="" class="btn-outline flex">Secondary</a>
-          <a href="" class="btn-disabled flex">Secondary</a>
+        <h3>flex-column, flex-column-reverse</h3>
+        <div class="flex-row flex-list">
+          <div class="flex-column flex-list flex">
+            <p>flex-column</p>
+            <button class="btn flex">1</button>
+            <button class="btn-outline flex">2</button>
+            <button class="btn-outline flex">3</button>
+          </div>
+          <br>
+          <div class="flex-column-reverse flex-list flex">
+            <button class="btn flex">1</button>
+            <button class="btn-outline flex">2</button>
+            <button class="btn-outline flex">3</button>
+            <p>flex-column-reverse</p>
+          </div>
         </div>
         <br>
-        <p>flex-column</p>
-        <div class="flex-column flex-list">
-          <a href="" class="btn flex">Primary</a>
-          <a href="" class="btn-outline flex">Secondary</a>
-          <a href="" class="btn-disabled flex">Secondary</a>
-        </div>
-        <br>
-        <p>flex-wrap</p>
+        <a name="responsiveflex"></a>
+        <h2>Responsive Flex</h2>
+        <p>FlexKit provides a pre-built, responsive flex class called <code>flex-smart</code> and <code>flex-smart-reverse</code>. These two classes provide a responsive alternative to fixed flex directions and allow mobile-first experiences to be built with ease.</p>
+        <p><code>flex-smart</code> behaves like <code>flex-column</code> on small screens, with a default breakpoint of 768 pixels. On larger screens, it transitions to behave like <code>flex-row</code>. <code>flex-smart-reverse</code> behaves like <code>flex-column-reverse</code> on small screens and like <code>flex-row-reverse</code> on larger screens.</p>
+        <a name="flexalignment"></a>
+        <h2>Flex Alignment</h2>
+        <p>FlexKit also provides alignment classes for use in conjunction with flex items. These include align and justify styles, which affect the <code>align-items</code> and <code>justify-content</code> CSS properties.</p>
+        <a name="flexwrap"></a>
+        <h2>Flex Wrap</h2>
+        <p>FlexKit Core provides a <code>flex-wrap</code> class which enables the wrapping of fixed-width elements.</p>
         <div class="flex-row flex-list flex-wrap">
           <div class="card">
             <h3>A fixed-width card</h3>
@@ -97,16 +130,45 @@
           </div>
         </div>
         <br>
+        <a name="full"></a>
+        <h2>FlexKit Full</h2>
+        <p>FlexKit can also be configured with additional modules. A slim, Bootstrap-like button module is available, in addition to the flexlist module which integrates with flex directions to allow building flex lists quickly. These modules are SASS-based and can be easily excluded or included in a custom shim of FlexKit. By default, FlexKit Full includes all core styles and all modules.</p>
+        <a name="buttons"></a>
+        <h2>Buttons Module</h2>
+        <p>FlexKit buttons are similar to Bootstrap buttons, but only include 3 light styles - a primary button, the outline version, and a disabled variant. They work on both anchor and button elements.</p>
+        <p>Use these with <code>btn</code>, <code>btn-outline</code>, and <code>btn-disabled</code> respectively.</p>
+        <div class="flex-row flex-list">
+          <button class="btn flex">Primary</button>
+          <button class="btn-outline flex">Outline</button>
+          <button class="btn-disabled flex">Disabled</button>
+        </div>
+        <br>
+        <a name="flexlist"></a>
+        <h2>Flexlist Module</h2>
+        <p>Flexlist is a module that allows building flexy lists quickly and easily without worrying about styling. Use it in conjunction with flex direction or flex-smart styles to add spacing between your flex items.</p>
+        <p>This is a group of items without <code>flex-list</code>.</p>
+        <div class="flex-row">
+          <button class="btn flex">1</button>
+          <button class="btn-outline flex">2</button>
+          <button class="btn-outline flex">3</button>
+        </div>
+        <p>This is a group of items with <code>flex-list</code>.</p>
+        <div class="flex-row flex-list">
+          <button class="btn flex">1</button>
+          <button class="btn-outline flex">2</button>
+          <button class="btn-outline flex">3</button>
+        </div>
+        <br>
         <a name="navigation"></a>
         <h2>Navigation</h2>
-        <p>flex-smart, flex-list, nav-right, nav-link</p>
+        <p>Navigation is currently <b>broken when wrapping on smaller sizes</b>.</p>
+        <p>Use <code>nav-right</code> and <code>nav-left</code> to create flexy split navbars.</p>
         <nav class="flex-smart flex-list">
           <a href="" class="nav-link">Primary</a>
           <a href="" class="nav-link nav-right">Secondary</a>
           <a href="" class="nav-link">Secondary</a>
         </nav>
         <br>
-        <p>nav-left</p>
         <nav class="flex-smart flex-list">
           <a href="" class="nav-link">Primary</a>
           <a href="" class="nav-link nav-left">Primary</a>
