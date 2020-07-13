@@ -1,29 +1,29 @@
 // List stylings
-$margin: 20px;
+$flexlist-margin: 20px;
 
 .flex-list {
   &.flex-column > *:not(:last-child),
   &.flex-column-reverse > *:not(:first-child), 
   &.flex-smart > *:not(:last-child),
   &.flex-smart-reverse > *:not(:first-child) {
-    margin-bottom: $margin;
+    margin-bottom: $flexlist-margin;
   }
 
   &.flex-row > *:not(:last-child),
   &.flex-row-reverse > *:not(:first-child) {
-    margin-right: $margin;
+    margin-right: $flexlist-margin;
   }
 
   @media (min-width: 768px) {
     &.flex-smart > *:not(:last-child),
     &.flex-smart-reverse > *:not(:first-child) {
-      margin-right: $margin;
+      margin-right: $flexlist-margin;
       margin-bottom: 0;
     }
   }
 
   &.flex-wrap > * {
-    margin-right: $margin;
-    margin-bottom: $margin;
+    margin-right: $flexlist-margin;
+    margin-bottom: $flexlist-margin;
   }
 }

@@ -1,11 +1,24 @@
 // Navigation helpers
+$flex-breakpoint: 768px;
 
-.nav-left {
-  margin-right: auto !important;
+.flex-row {
+  .nav-left {
+    margin-right: auto !important;
+  }
+
+  .nav-right {
+    margin-left: auto !important;
+  }
 }
 
-.nav-right {
-  margin-left: auto !important;
+@media (min-width: $flex-breakpoint) {
+  .nav-left {
+    margin-right: auto !important;
+  }
+  
+  .nav-right {
+    margin-left: auto !important;
+  }
 }
 
 .nav-link {

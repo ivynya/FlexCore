@@ -161,14 +161,22 @@ body {
   margin-bottom: 20px;
 }
 
-.nav-left {
+.flex-row .nav-left {
   margin-right: auto !important;
 }
-
-.nav-right {
+.flex-row .nav-right {
   margin-left: auto !important;
 }
 
+@media (min-width: 768px) {
+  .nav-left {
+    margin-right: auto !important;
+  }
+
+  .nav-right {
+    margin-left: auto !important;
+  }
+}
 .nav-link {
   text-align: center;
   padding: 10px;
@@ -178,4 +186,4 @@ body {
 /* Core styles */
 /* Optional module styles */
 
-/*# sourceMappingURL=flexkit.css.map */
+/*# sourceMappingURL=flexcore.css.map */
