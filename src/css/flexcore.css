@@ -161,6 +161,10 @@ body {
   margin-bottom: 20px;
 }
 
+.nav-spacer {
+  flex: 1 1 auto;
+}
+
 .flex-row .nav-left {
   margin-right: auto !important;
 }
@@ -177,12 +181,6 @@ body {
     margin-left: auto !important;
   }
 }
-.nav-link {
-  text-align: center;
-  padding: 10px;
-  transition-duration: 0.2s;
-}
-
 /* Core styles */
 /* Optional module styles */
 

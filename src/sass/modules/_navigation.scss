@@ -1,5 +1,9 @@
-// Navigation helpers
+// Navbar helpers
 $flex-breakpoint: 768px;
+
+.nav-spacer {
+  flex: 1 1 auto;
+}
 
 .flex-row {
   .nav-left {
@@ -19,10 +23,4 @@ $flex-breakpoint: 768px;
   .nav-right {
     margin-left: auto !important;
   }
-}
-
-.nav-link {
-  text-align: center;
-  padding: 10px;
-  transition-duration: 0.2s;
 }
