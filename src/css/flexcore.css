@@ -109,41 +109,6 @@ body {
   }
 }
 
-.btn, .btn-outline, .btn-disabled {
-  border: #0af 2px solid;
-  border-radius: 3px;
-  padding: 10px;
-  font-family: inherit;
-  font-size: inherit;
-  text-align: center;
-  text-decoration: none;
-  transition-duration: 0.2s;
-}
-
-.btn {
-  background-color: #0af;
-  color: #fff;
-}
-.btn:hover {
-  background-color: #0088cc;
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: #0af;
-}
-.btn-outline:hover {
-  background-color: #0af;
-  color: #fff;
-}
-
-.btn-disabled {
-  background-color: #555;
-  border-color: #555;
-  color: #b3b3b3;
-  cursor: not-allowed;
-}
-
 .flex-list.flex-column > *:not(:last-child), .flex-list.flex-column-reverse > *:not(:first-child), .flex-list.flex-smart > *:not(:last-child), .flex-list.flex-smart-reverse > *:not(:first-child) {
   margin-bottom: 20px;
 }
@@ -181,7 +146,43 @@ body {
     margin-left: auto !important;
   }
 }
+.btn, .btn-outline, .btn-disabled {
+  border: #0af 2px solid;
+  border-radius: 3px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.btn {
+  background-color: #0af;
+  color: #fff;
+}
+.btn:hover {
+  background-color: #0088cc;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #0af;
+}
+.btn-outline:hover {
+  background-color: #0af;
+  color: #fff;
+}
+
+.btn-disabled {
+  background-color: #555;
+  border-color: #555;
+  color: #b3b3b3;
+  cursor: not-allowed;
+}
+
 /* Core styles */
 /* Optional module styles */
+/* Optional component styles */
 
 /*# sourceMappingURL=flexcore.css.map */

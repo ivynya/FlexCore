@@ -2,9 +2,11 @@
 /* Core styles */
 @use './core/base';
 @use './core/alignment';
-@use './core/container';
 
 /* Optional module styles */
-@use './modules/buttons';
+@use './modules/container';
 @use './modules/flexlist';
 @use './modules/navigation';
+
+/* Optional component styles */
+@use './components/buttons';

@@ -22,3 +22,7 @@ Build your own shim of FlexCore from our website. Coming soon.
 
 ## Compatibility
 FlexCore adopts a Bootstrap-like naming scheme. This results in potential incompatibilities, meaning it is recommended that the two aren't used together.
+
+Core styles and modules are guaranteed to function *with overlap* in Bootstrap.
+
+Components are not guaranteed to function as they are intentionally designed to replace Bootstrap components.
