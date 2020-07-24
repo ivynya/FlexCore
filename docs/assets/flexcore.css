@@ -109,6 +109,43 @@ body {
   }
 }
 
+.flex-list.flex-column > *:not(:last-child), .flex-list.flex-column-reverse > *:not(:first-child), .flex-list.flex-smart > *:not(:last-child), .flex-list.flex-smart-reverse > *:not(:first-child) {
+  margin-bottom: 20px;
+}
+.flex-list.flex-row > *:not(:last-child), .flex-list.flex-row-reverse > *:not(:first-child) {
+  margin-right: 20px;
+}
+@media (min-width: 768px) {
+  .flex-list.flex-smart > *:not(:last-child), .flex-list.flex-smart-reverse > *:not(:first-child) {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+.flex-list.flex-wrap > * {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-spacer {
+  flex: 1 1 auto;
+}
+
+.flex-row .nav-left {
+  margin-right: auto !important;
+}
+.flex-row .nav-right {
+  margin-left: auto !important;
+}
+
+@media (min-width: 768px) {
+  .nav-left {
+    margin-right: auto !important;
+  }
+
+  .nav-right {
+    margin-left: auto !important;
+  }
+}
 .btn, .btn-outline, .btn-disabled {
   border: #0af 2px solid;
   border-radius: 3px;
@@ -144,46 +181,10 @@ body {
   cursor: not-allowed;
 }
 
-.flex-list.flex-column > *:not(:last-child), .flex-list.flex-column-reverse > *:not(:first-child), .flex-list.flex-smart > *:not(:last-child), .flex-list.flex-smart-reverse > *:not(:first-child) {
-  margin-bottom: 20px;
+.card {
+  box-shadow: #777 0 2px 6px;
+  border-radius: 2px;
+  padding: 20px;
 }
-.flex-list.flex-row > *:not(:last-child), .flex-list.flex-row-reverse > *:not(:first-child) {
-  margin-right: 20px;
-}
-@media (min-width: 768px) {
-  .flex-list.flex-smart > *:not(:last-child), .flex-list.flex-smart-reverse > *:not(:first-child) {
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
-}
-.flex-list.flex-wrap > * {
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.flex-row .nav-left {
-  margin-right: auto !important;
-}
-.flex-row .nav-right {
-  margin-left: auto !important;
-}
-
-@media (min-width: 768px) {
-  .nav-left {
-    margin-right: auto !important;
-  }
-
-  .nav-right {
-    margin-left: auto !important;
-  }
-}
-.nav-link {
-  text-align: center;
-  padding: 10px;
-  transition-duration: 0.2s;
-}
-
-/* Core styles */
-/* Optional module styles */
 
 /*# sourceMappingURL=flexcore.css.map */

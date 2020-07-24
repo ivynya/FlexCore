@@ -25,7 +25,7 @@
       <h1>FlexCore</h1>
       <h2>A hyperlight IE10+ responsive flex framework.</h2>
       <div class="flex-row flex-list">
-        <a href="https://github.com/SDBagel/FlexCore/releases/tag/v0.1.0a" class="btn">Download v1.0.0</a>
+        <a href="https://github.com/SDBagel/FlexCore/releases/tag/v0.1.0a" class="btn">Download v0.1.0a</a>
         <a class="btn-disabled">Web Builder (Soon™)</a>
       </div>
     </div>
@@ -49,29 +49,28 @@
     <div class="flex-smart">
       <section class="flex-column outline">
         <h2>Outline</h2>
-        <a href="#config"><b>FlexCore Config</b></a>
+        <a href="#core"><b>FlexCore Core</b></a>
+        <a href="#container">Container</a>
         <a href="#flexchildren">Flex Children</a>
         <a href="#flexdirections">Flex Directions</a>
         <a href="#responsiveflex">Responsive Flex</a>
         <a href="#flexalignment">Flex Alignment</a>
         <a href="#flexwrap">Flex Wrap</a>
         <br>
-        <a href="#container">Container Module</a>
+        <a href="#full"><b>FlexCore Full</b></a>
+        <a href="#buttons">Buttons Module</a>
         <a href="#flexlist">Flexlist Module</a>
         <a href="#navigation">Navigation Module</a>
-        <br>
-        <a href="#buttons">Buttons Component</a>
-        <a href="#buttons">Cards Component</a>
       </section>
       <section class="flex-column flex docs">
-        <h2>FlexCore v1.0.0 Documentation</h2>
-        <p>Looking for older documentation? <a href="./v0.1.0a">Check here for the v0.1.0a docs.</a></p>
-        <a name="config"></a>
-        <h2>FlexCore Configuration</h2>
-        <p>FlexCore can be configured in many different ways due to the use of SASS files. FlexCore features three categories of SASS files - core, modules, and components. <code>flexcore.min.css</code> in the distribution provides all styles, while <code>flexcore-base.min.css</code> provides the core styles with container and flexlist modules.</p>
-        <p>Core files include the base and alignment files. These form the foundation of FlexCore with flex directions and general positioning styles as well as responsive styles like flex-smart.</p>
-        <p>Modules are optional extensions to core styles. These may not be needed in every use case and as such may be configured at will. Examples include the Container module, which add a Bootstrap-like container, and the Flexlist module which makes list creation easier.</p>
-        <p>FlexCore also provides optional components. These components intend to be similar to and slimmer than common Bootstrap components like buttons.</p>
+        <h2>FlexCore v0.1.0a Documentation</h2>
+        <a name="core"></a>
+        <h2>FlexCore Core</h2>
+        <p>FlexCore Core is the minimum, responsive, layouting shim of FlexCore. FlexCore Core features the base flex styles, alignment modifiers, and a Bootstrap-like container component to let you start building web layouts quickly and efficiently.</p>
+        <p>FlexCore also includes other modules and components, including classes to help build lists, navigation, and more, which are included in <a href="#full">FlexCore Full</a>. Alternatively, compile a custom shim of FlexCore with the desired modules with the SASS source files.</p>
+        <a name="container"></a>
+        <h2>Container</h2>
+        <p>FlexCore Core includes a <code>container</code> and <code>container-wide</code> class. These behave similarly to Bootstrap containers and allow content to stay in the middle of the screen without flowing out too far from the center. The default container's max-width is 768 pixels, while the container-wide class adds another breakpoint at 992 pixels.</p>
         <a name="flexchildren"></a>
         <h2>Flex Children</h2>   
         <p>FlexCore includes a <code>.flex</code> CSS class that applies <code>flex: 1 1</code> to any element. This is useful in conjunction with the flex-directions and other helpers described below.</p>
@@ -136,9 +135,19 @@
           </div>
         </div>
         <br>
-        <a name="container"></a>
-        <h2>Container Module</h2>
-        <p>FlexCore Core includes a <code>container</code> and <code>container-wide</code> class. These behave similarly to Bootstrap containers and allow content to stay in the middle of the screen without flowing out too far from the center. The default container's max-width is 768 pixels, while the container-wide class adds another breakpoint at 992 pixels.</p>
+        <a name="full"></a>
+        <h2>FlexCore Full</h2>
+        <p>FlexCore can also be configured with additional modules. A slim, Bootstrap-like button module is available, in addition to the flexlist module which integrates with flex directions to allow building flex lists quickly. These modules are SASS-based and can be easily excluded or included in a custom shim of FlexCore. By default, FlexCore Full includes all core styles and all modules.</p>
+        <a name="buttons"></a>
+        <h2>Buttons Module</h2>
+        <p>FlexCore buttons are similar to Bootstrap buttons, but only include 3 light styles - a primary button, the outline version, and a disabled variant. They work on both anchor and button elements.</p>
+        <p>Use these with <code>btn</code>, <code>btn-outline</code>, and <code>btn-disabled</code> respectively.</p>
+        <div class="flex-row flex-list">
+          <button class="btn flex">Primary</button>
+          <button class="btn-outline flex">Outline</button>
+          <button class="btn-disabled flex">Disabled</button>
+        </div>
+        <br>
         <a name="flexlist"></a>
         <h2>Flexlist Module</h2>
         <p>Flexlist is a module that allows building flexy lists quickly and easily without worrying about styling. Use it in conjunction with flex direction or flex-smart styles to add spacing between your flex items.</p>
@@ -156,7 +165,8 @@
         </div>
         <br>
         <a name="navigation"></a>
-        <h2>Navigation Module</h2>
+        <h2>Navigation</h2>
+        <p>Navigation is currently <b>broken when wrapping on smaller sizes</b>.</p>
         <p>Use <code>nav-right</code> and <code>nav-left</code> to create flexy split navbars.</p>
         <nav class="flex-smart flex-list">
           <a href="" class="nav-link">Primary</a>
@@ -169,39 +179,8 @@
           <a href="" class="nav-link nav-left">Primary</a>
           <a href="" class="nav-link">Secondary</a>
         </nav>
-        <br>
-        <p>Alternatively, use <code>nav-spacer</code> which achieves a slightly different effect on mobile.</p>
-        <nav class="flex-smart flex-list">
-          <a href="" class="nav-link">Primary</a>
-          <a href="" class="nav-link">Primary</a>
-          <span class="nav-spacer"></span>
-          <a href="" class="nav-link">Secondary</a>
-        </nav>
-        <br>
-        <a name="buttons"></a>
-        <h2>Buttons Component</h2>
-        <p>FlexCore buttons are similar to Bootstrap buttons, but only include 3 light styles - a primary button, the outline version, and a disabled variant. They work on both anchor and button elements.</p>
-        <p>Use these with <code>btn</code>, <code>btn-outline</code>, and <code>btn-disabled</code> respectively.</p>
-        <div class="flex-row flex-list">
-          <button class="btn flex">Primary</button>
-          <button class="btn-outline flex">Outline</button>
-          <button class="btn-disabled flex">Disabled</button>
-        </div>
-        <br>
-        <a name="buttons"></a>
-        <h2>Cards Component</h2>
-        <p>FlexCore cards are highly simplified components, meant simply as a visual wrapper for any content desired.</p>
-        <div class="flex-row flex-list">
-          <div class="card flex">
-            <h3>This is a card.</h3>
-            <p>You can put any content you like within a card.</p>
-          </div>
-        </div>
       </section>
     </div>
   </main>
-  <footer class="container-wide">
-    <p>(C) 2020 Kyle | SDBagel under MIT License.</p>
-  </footer>
 </body>
 </html>

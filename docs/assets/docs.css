@@ -2,6 +2,10 @@ html {
   font-family: nunito, sans-serif;
 }
 
+.text-danger {
+  color: #c20;
+}
+
 a {
   color: #0af;
 }
@@ -17,14 +21,23 @@ a {
 }
 
 .content-header {
-  height: 300px;
+  height: 350px;
+  margin-bottom: 50px;
+}
+
+.content-header h1 {
+  font-size: 64px;
+  margin: 0;
+}
+
+.content-header h2 {
+  margin-top: 0;
+  margin-bottom: 35px;
 }
 
 .card {
-  box-shadow: #777 0 2px 6px;
   width: 230px;
   line-height: 24px;
-  padding: 20px;
 }
 
 .card h2 {
