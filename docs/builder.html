@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FlexCore Web Builder - Customize FlexCore Online</title>
+  <meta name="description" content="FlexCore is a hyperlight IE10+ flex framework built to be built on.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/flexcore.css">
+  <link rel="stylesheet" type="text/css" href="assets/docs.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200;400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <script src="builder/builder.js"></script>
+  <script src="builder/.sass.js/sass.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="nav container-wide flex-smart flex-list">
+      <a href="./" class="nav-brand flex-row align-center">
+        <img src="./assets/flexcore_icon.png" alt="FlexCore Icon" style="margin-right: 5px;">
+        <span>FlexCore</span>
+      </a>
+      <a href="https://github.com/SDBagel/FlexCore" class="btn-outline nav-right">Github</a>
+      <a href="https://github.com/SDBagel/FlexCore/releases/" class="btn">Download</a>
+    </nav>
+  </header>
+  <main class="container-wide">
+    <div class="flex-column justify-center align-center">
+      <h1>FlexCore Web Configurator</h1>
+      <div class="flex-row flex-list">
+        <a href="https://github.com/SDBagel/FlexCore/releases/" class="btn-outline">Back to Documentation</a>
+      </div>
+    </div>
+    <br><br>
+    <hr>
+    <br>
+    <section class="flex-column flex docs">
+      <p>Check each component and module file you want to include in your build of FlexCore. Then, click "Build My Configuration". Your browser will use <a href="https://github.com/medialize/sass.js">sass.js</a> to compile your file and you'll get a download prompt for where to save the file.</p>
+      <br>
+      <div class="flex-row justify-center">
+        <button class="btn">Build My Configuration</button>
+      </div>
+      <br><br>
+      <div class="flex-smart flex-list builder">
+        <div class="card flex-column flex">
+          <h2>Core</h2>
+          <p>Core styles are required and provide the base layouting styles.</p>
+          <label for="core-base" class="checkbox">Base Styles
+            <input id="core-base" type="checkbox" checked disabled>
+            <span class="checkmark"></span>
+          </label>
+          <label for="core-alignment" class="checkbox">Alignment
+            <input id="core-alignment" type="checkbox" checked disabled>
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="card flex-column flex">
+          <h2>Modules</h2>
+          <p>Modules extend the base layouting with more options and styles.</p>
+          <label for="mod-container" class="checkbox">Container
+            <input id="mod-container" type="checkbox" checked>
+            <span class="checkmark"></span>
+          </label>
+          <label for="mod-flexlist" class="checkbox">FlexList
+            <input id="mod-flexlist" type="checkbox" checked>
+            <span class="checkmark"></span>
+          </label>
+          <label for="mod-navigation" class="checkbox">Navigation
+            <input id="mod-navigation" type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="card flex-column flex">
+          <h2>Components</h2>
+          <p>Components are pre-built, slim, and extensible CSS components.</p>
+          <label for="comp-buttons" class="checkbox">Buttons
+            <input id="comp-buttons" type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label for="comp-card" class="checkbox">Cards
+            <input id="comp-card" type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <br><br>
+
+      <h2>Your Built File</h2>
+      <textarea id="build-result" rows="10"></textarea>
+    </section>
+  </main>
+  <footer class="container-wide">
+    <p>(C) 2020 Kyle | SDBagel under MIT License.</p>
+  </footer>
+</body>
+</html>

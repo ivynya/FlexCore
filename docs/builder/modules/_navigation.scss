@@ -1,0 +1,26 @@
+// Navbar helpers
+$flex-breakpoint: 768px;
+
+.nav-spacer {
+  flex: 1 1 auto;
+}
+
+.flex-row {
+  .nav-left {
+    margin-right: auto !important;
+  }
+
+  .nav-right {
+    margin-left: auto !important;
+  }
+}
+
+@media (min-width: $flex-breakpoint) {
+  .nav-left {
+    margin-right: auto !important;
+  }
+  
+  .nav-right {
+    margin-left: auto !important;
+  }
+}

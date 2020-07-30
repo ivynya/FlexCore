@@ -1,0 +1,42 @@
+// Bootstrap-like buttons
+$bg-primary: #0af;
+$bg-disabled: #555;
+$text-primary: #fff;
+$text-disabled: darken($text-primary, 30);
+
+.btn, .btn-outline, .btn-disabled {
+  border: $bg-primary 2px solid;
+  border-radius: 3px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.btn {
+  background-color: $bg-primary;
+  color: $text-primary;
+
+  &:hover {
+    background-color: darken($bg-primary, 10);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $bg-primary;
+
+  &:hover {
+    background-color: $bg-primary;
+    color: $text-primary;
+  }
+}
+
+.btn-disabled {
+  background-color: $bg-disabled;
+  border-color: $bg-disabled;
+  color: $text-disabled;
+  cursor: not-allowed;
+}

@@ -1,0 +1,27 @@
+// Default resets
+body {
+  margin: 0;
+}
+
+// Flexible responsive container
+.container, .container-wide {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 10px;
+
+  @media (min-width: 512px) {
+    max-width: 512px;
+    padding: 20px 10px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+}
+
+// A wider responsive container
+.container-wide {
+  @media (min-width: 992px) {
+    max-width: 992px;
+  }
+}
