@@ -18,7 +18,7 @@ Get the raw SASS and CSS files of FlexCore [from the releases](https://github.co
 `flexcore.min.css` includes the base styles, and `flexcore-full.min.css` includes all optional module styles. Include the file in your HTML and you're good to go!
 
 ### Web Builder
-Build your own shim of FlexCore from our website. Coming soon.
+[Build your own shim of FlexCore from our website.](https://sdbagel.com/FlexCore/builder) Customize which components and modules you add on to build only what you need.
 
 ## Compatibility
 FlexCore adopts a Bootstrap-like naming scheme. This results in potential incompatibilities, meaning it is recommended that the two aren't used together.

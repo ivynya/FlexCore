@@ -32,13 +32,6 @@ async function builder() {
   let scss = await mapper();
   sass.compile(scss, (result) => {
     result = result.text;
-
-    fetch(`https://cssminifier.com/raw?input=${result}`, { method: "POST", mode: "no-cors" })
-    .then(res => res.text())
-    .then(res => {
-      console.log(`Built and minified: ${res}`);
-      document.getElementById("build-result").value = res;
-    })
-    .catch(ex => document.getElementById("build-result").value = result);
+    document.getElementById("build-result").value = result;
   });
 }
