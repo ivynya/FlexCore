@@ -1,11 +1,11 @@
 var buildDict = {
-  "core-base": "builder/core/_base.scss",
-  "core-alignment": "builder/core/_alignment.scss",
-  "mod-container": "builder/modules/_container.scss",
-  "mod-flexlist": "builder/modules/_flexlist.scss",
-  "mod-navigation": "builder/modules/_navigation.scss",
-  "comp-buttons": "builder/components/_buttons.scss",
-  "comp-card": "builder/components/_card.scss"
+  "core-base": "builder/core/base.scss",
+  "core-alignment": "builder/core/alignment.scss",
+  "mod-container": "builder/modules/container.scss",
+  "mod-flexlist": "builder/modules/flexlist.scss",
+  "mod-navigation": "builder/modules/navigation.scss",
+  "comp-buttons": "builder/components/buttons.scss",
+  "comp-card": "builder/components/card.scss"
 }
 
 function mapper() {
@@ -28,7 +28,11 @@ function builder() {
   let sass = new Sass();
   let scss = mapper();
   sass.compile(scss, (result) => {
-    console.log(`Built file: ${result}`);
-    document.getElementById("build-result").value = result;
+    fetch(`https://cssminifier.com/raw?input=${result}`, { method: "POST" })
+    .then(res => res.text())
+    .then(res => {
+      console.log(`Built and minified: ${res}`);
+      document.getElementById("build-result").value = res;
+    })
   });
 }
