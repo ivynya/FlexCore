@@ -8,31 +8,37 @@ var buildDict = {
   "comp-card": "builder/components/card.scss"
 }
 
-function mapper() {
-  let returnString = "";
-  for (const key in buildDict) {
-    let el = document.getElementById(key);
-    if (el && el.checked) {
-      fetch(buildDict[key])
-      .then(res => res.text())
-      .then(res => returnString += res)
-      .catch(ex => console.log(ex));
-    }
-  }
+function getter(key) {
+  return new Promise((resolve, reject) => {
+    if (!document.getElementById(key).checked)
+      resolve("");
 
-  console.log(`Build string: ${returnString}`);
-  return returnString;
+    fetch(buildDict[key])
+    .then(res => resolve(res.text()))
+    .catch(ex => reject(ex));
+  });
 }
 
-function builder() {
+function mapper() {
+  return new Promise((resolve, reject) => {
+    Promise.all(Object.keys(buildDict).map(key => getter(key)))
+    .then(vals => resolve(vals.join(" ")))
+    .catch(ex => reject(ex));
+  });
+}
+
+async function builder() {
   let sass = new Sass();
-  let scss = mapper();
+  let scss = await mapper();
   sass.compile(scss, (result) => {
-    fetch(`https://cssminifier.com/raw?input=${result}`, { method: "POST" })
+    result = result.text;
+
+    fetch(`https://cssminifier.com/raw?input=${result}`, { method: "POST", mode: "no-cors" })
     .then(res => res.text())
     .then(res => {
       console.log(`Built and minified: ${res}`);
       document.getElementById("build-result").value = res;
     })
+    .catch(ex => document.getElementById("build-result").value = result);
   });
 }
